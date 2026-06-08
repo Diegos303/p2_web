@@ -1,0 +1,140 @@
+h1 {
+font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end; /* Alinha o conteúdo ao final */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura */
+}
+
+/*contêiner dos links: */
+.nav-item {
+    margin-left: 20px;
+}
+
+#menu {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+#main-menu {
+  margin: 0;
+  padding: 0;
+}
+
+#login-carrinho {
+  margin-right: auto;
+}
+
+/* Estiliza os links principais (Masculino, Feminino, etc) */
+.navbar .nav-link {
+  color: black !important;
+  font-weight: 500; /* Deixa um pouco mais visível */
+}
+
+/* Garante que o texto continue branco quando passar o mouse */
+.navbar .nav-link:hover {
+  color: #e0f7fa !important; /* Um branco levemente azulado no hover */
+}
+
+/* A caixa que aparece ao clicar */
+.dropdown-menu {
+  background-color: #0cc0df !important; /* Azul Turquesa (Turquoise) */
+  border: none; /* Remove a borda padrão para ficar mais moderno */
+}
+
+/* Os itens dentro da caixa turquesa */
+.dropdown-item {
+  color: black !important; /* Texto branco dentro do turquesa */
+}
+
+/* Quando passar o mouse nas opções de dentro da caixa */
+.dropdown-item:hover {
+  background-color: #31beb0 !important; /* Um turquesa um pouco mais escuro */
+  color: white !important;
+}
+
+/* A linha divisória */
+.dropdown-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 1. Diminui a altura da barra principal */
+.navbar {
+  padding-top: 0.01rem !important;    /* Quase remove o espaço superior */
+  padding-bottom: 0.01rem !important; /* Quase remove o espaço inferior */
+  min-height: 40px;                  /* Força uma altura menor */
+}
+
+/* 2. Diminui o texto e o espaço dos links */
+.navbar .nav-link {
+  font-size: 1.1rem !important;     /* Texto menor (padrão é 1rem) */
+  padding-top: 0.2rem !important;
+  padding-bottom: 0.2rem !important;
+}
+
+/* 3. Ajusta o tamanho das caixas que abrem (Dropdowns) */
+.dropdown-menu {
+  font-size: 0.8rem !important;      /* Texto interno menor */
+  min-width: 150px;                  /* Deixa a caixinha menos larga */
+}
+
+.dropdown-item {
+  padding: 0.25rem 1rem !important;  /* Itens da lista mais "juntos" */
+}
+
+/*Barra de Pesquisa*/
+.search-box {
+  position: absolute;
+  background: #fff;
+  height: 30px;
+  padding: 5px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 14px;
+  left: 14px;
+}
+
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  font-size: 15px;
+  line-height: 40px;
+  width: 0;
+  transition: .5s;
+}
+
+.search-btn {
+  width: 40px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+/* Mantém aberto se estiver com o mouse em cima OU se o input estiver focado */
+.search-box:hover > .search-txt,
+.search-box:focus-within > .search-txt {
+  width: 180px;
+  padding: 0 6px;
+}
+
+/* Muda a cor do botão se estiver com o mouse em cima OU se o input estiver focado */
+.search-box:hover > .search-btn,
+.search-box:focus-within > .search-btn {
+  background: #0cc0df;
+}
+
+/*FOOTER*/
+footer {
+  padding: 30px;
+}

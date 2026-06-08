@@ -1,0 +1,152 @@
+<br>
+<div class="cadastro">
+
+  <h2>Cadastro</h2>
+
+  <h3>INFORMAÇÕES PESSOAIS</h3>
+  <hr>
+
+  <div class="linhaCad">
+    <div>
+      Nome
+      <input type="text" [(ngModel)]="obj.nome" class="form-control">
+      
+    </div>
+
+    <div>
+      Sobrenome
+      <input type="text" [(ngModel)]="obj.sobrenome" class="form-control">
+    </div>
+  </div>
+
+  <div class="linhaCad">
+    <div>
+      CPF/CNH
+      <input type="text" [(ngModel)]="obj.documento" class="form-control">
+      <br>
+      Sexo
+      <select [(ngModel)]="obj.sexo" class="form-control">
+        <option value="">Selecione</option>
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+        <option value="nao_informar">Não informar</option>
+      </select>
+
+    </div>
+
+    <div>
+      Data de Nascimento
+      <input type="date" [(ngModel)]="obj.dataNascimento" class="form-control">
+      
+    </div>
+  </div>
+  
+
+  <h3>INFORMAÇÕES DE ENTREGA</h3>
+  <hr>
+
+  <div class="linhaCad">
+    <div>
+      Nome do Destinatário
+      <input type="text" [(ngModel)]="obj.destinatario" class="form-control">
+    </div>
+
+    <div>
+      CEP
+      <input type="text" [(ngModel)]="obj.cep" class="form-control">
+    </div>
+  </div>
+
+  <div>
+    Endereço
+    <input type="text" [(ngModel)]="obj.endereco" class="form-control">
+  </div>
+  <br>
+  <div class="linhaCad">
+    <div>
+      Número
+      <input type="text" [(ngModel)]="obj.numero" class="form-control">
+    </div>
+
+    <div>
+      Complemento
+      <input type="text" [(ngModel)]="obj.complemento" class="form-control">
+    </div>
+  </div>
+
+  <div class="linhaCad">
+    <div>
+      Bairro
+      <input type="text" [(ngModel)]="obj.bairro" class="form-control">
+    </div>
+
+    <div>
+      Cidade
+      <input type="text" [(ngModel)]="obj.cidade" class="form-control">
+    </div>
+
+    <div>
+      Estado
+      <select [(ngModel)]="obj.estado" class="form-control">
+        <option value="">Selecione</option>
+        <option>AC</option>
+        <option>AL</option>
+        <option>AP</option>
+        <option>AM</option>
+        <option>BA</option>
+        <option>CE</option>
+        <option>DF</option>
+        <option>ES</option>
+        <option>GO</option>
+        <option>MA</option>
+        <option>MT</option>
+        <option>MS</option>
+        <option>MG</option>
+        <option>PA</option>
+        <option>PB</option>
+        <option>PR</option>
+        <option>PE</option>
+        <option>PI</option>
+        <option>RJ</option>
+        <option>RN</option>
+        <option>RS</option>
+        <option>RO</option>
+        <option>RR</option>
+        <option>SC</option>
+        <option>SP</option>
+        <option>SE</option>
+        <option>TO</option>
+      </select>
+    </div>
+  </div>
+
+  <h3>DADOS DE ACESSO</h3>
+  <hr>
+
+  <div>
+    E-mail
+    <input type="email" [(ngModel)]="obj.email" class="form-control">
+  </div>
+  <br>
+
+  <div>
+    Senha
+    <input type="password" [(ngModel)]="obj.senha" class="form-control">
+  </div>
+  <br>
+  <div>
+    Repita a Senha
+    <input type="password" [(ngModel)]="obj.repitaSenha" class="form-control">
+  </div>
+
+</div>
+
+
+<div class="botoesCad">
+  <button (click)="cadastrar()" class="btn">CONFIRMAR</button>
+  <button (click)="cancelar()" class="btn">CANCELAR</button>
+</div>
+<div class ="mensagemCadastro">
+  <h4>{{mensagem}}</h4>
+
+</div>

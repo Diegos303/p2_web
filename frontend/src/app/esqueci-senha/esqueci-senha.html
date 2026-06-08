@@ -1,0 +1,25 @@
+<div class="esqueciSenha">
+
+<h3>Esqueceu a senha</h3>
+<br>  
+<h3> informe o email utilizado em seu Cadastro
+    e enviaremos as intruções para a alteração  
+    da senha.
+</h3>
+<br>
+  <div class ="emailEs">
+    Email <input type="email" [(ngModel)]="obj.email" class="form-control"><br>
+    
+    <p style="color:green; margin-top:10px;">{{ mensagem }}</p>
+
+  </div>
+
+  <div class= "button"> 
+    <button (click)="enviar()" class="btn">ENVIAR</button>
+    <br>
+    <button (click)="cancelar()" class="btn">CANCELAR</button>
+  </div>
+  
+
+</div>
+

@@ -1,0 +1,67 @@
+<header>
+  <h1><a routerLink="/vitrine">Cris Modas</a></h1>
+
+<nav class="navbar navbar-expand">
+    <div class="search-box">
+      <input type="text" class="search-txt" placeholder="Pesquisa">
+      <a href="#" class="search-btn">
+        <img src="img/icons8-pesquisar.svg" alt="lupa" height="20" width="20">
+      </a>
+    </div>
+
+  <div class="container-fluid">
+    <!-- Login & Carrinho -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="carrinho"><img src="img/icons8-carrinho-de-compras-60.png" alt="carrinho"></a> <!--<a target="_blank" href="https://icons8.com/icon/59997/shopping-cart">Carrinho de compras</a> ícone por <a target="_blank" href="https://icons8.com">Icons8</a>-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login"><img src="img/icons8-usuário-60.png" alt="login"></a> <!--<a target="_blank" href="https://icons8.com/icon/98957/user-male">Usuário</a> ícone por <a target="_blank" href="https://icons8.com">Icons8</a>-->
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg" id="main-menu">
+  <div class="container-fluid">
+    <ul class="navbar-nav w-100 nav-fill" id="menu">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Masculino
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+          <li><a class="dropdown-item" routerLink="/camisetas-m">Camisetas</a></li>
+          <li><a class="dropdown-item" routerLink="/shorts-m">Shorts</a></li>
+          <li><a class="dropdown-item" routerLink="/blusas-m">Blusas</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Feminino
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+          <li><a class="dropdown-item" routerLink="/camisetas-f">Camisetas</a></li>
+          <li><a class="dropdown-item" routerLink="/calcas-f">Calças</a></li>
+          <li><a class="dropdown-item" routerLink="/blusas-f">Blusas</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Acessórios
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
+          <li><a class="dropdown-item" routerLink="/chapeus">Bonés</a></li>
+          <li><a class="dropdown-item" routerLink="/bolsas">Bolsas</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+</header>
+<router-outlet />
+<footer>
+  <!-- <p align="center">Rodape</p> -->
+</footer>

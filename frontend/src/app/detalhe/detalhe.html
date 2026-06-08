@@ -1,0 +1,35 @@
+<br>
+<div class="row produto-container">
+
+    <div class="col-12 titulo-produto">
+        {{obj.nome}}
+    </div>
+
+    <div class="col-sm-12 col-md-5 imagem-box">
+        <img src="img-protudo/{{obj.codigo}}.webp" class="img-produto">
+    </div>
+
+    <div class="col-sm-12 col-md-7 info-produto">
+
+        <h4 class="subtitulo">Descrição</h4>
+        <p>{{obj.descritivo}}</p>
+
+        <div class="preco">
+            @if(obj.promo<obj.valor){
+                <span class="preco-antigo">R$ {{obj.valor}}</span><br>
+                <span class="preco-novo">R$ {{obj.promo}}</span>
+            } @else {
+                <span class="preco-novo">R$ {{obj.valor}}</span>
+            }
+        </div>
+
+        @if(obj.quantidade > 0){
+            <button class="btn-comprar" (click)="Comprar()">COMPRAR</button>
+        } @else {
+            <b>Sem Estoque</b>
+        }
+
+
+    </div>
+
+</div>

@@ -1,0 +1,30 @@
+<div class="login">
+
+<h3>Login</h3>
+<br>  
+  <div class ="email_senha">
+      Email <input type="email" [(ngModel)]="obj.email" class="form-control"><br>
+
+      Senha: <input type="password" [(ngModel)]="obj.senha" class="form-control"><br>
+
+      <p style="color:green; margin-top:10px;">{{ mensagem }}</p>
+  </div>
+
+
+  <a (click)="esqueciSenha()">Esqueci minha senha</a><br><br>
+
+  <a (click)="irParaCadastro()">Fazer Cadastro</a><br><br>
+
+ 
+
+</div>
+<div class= "button"> 
+  <button (click)="entrar()" class="btn">ACESSAR</button>
+
+  <button (click)="cancelar()" class="btn">CANCELAR</button>
+
+</div>
+
+
+
+

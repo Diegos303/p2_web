@@ -1,0 +1,23 @@
+.esqueciSenha {
+  text-align: center;
+  width: 600px;
+  margin: 170px auto; 
+  background-color: #0cc0df;
+  border-radius: 20px;  
+  padding: 70px;
+  max-width: 90%;
+  
+}
+
+.emailEs {
+    text-align: left;
+}
+
+.button .btn {
+    margin: 10px auto;
+    border-radius: 20px;
+    background-color: #2F80ED;
+    font-size: 20px;
+
+
+}

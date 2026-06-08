@@ -1,0 +1,25 @@
+<b>{{mensagem}}</b>
+
+<div class="row g-4" id="main-vitrine">
+
+  <div class="col-sm-3" id="container-protudo" *ngFor="let obj of lista">
+    <div class="card w-100 h-100"> <img class="card-img-top" src="img-protudo/{{obj.codigo}}.webp" alt="Card image">
+      <div class="card-body">
+        <h4 class="card-title">{{obj.nome}}</h4>
+        <div class="dropdown" id="descricao">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+            Descrição
+          </button>
+          <ul class="dropdown-menu">
+            <li><span class="dropdown-item-text" style="min-width: 300px; white-space: normal;">
+              {{obj.descritivo}}
+            </span></li>
+          </ul>
+        </div>
+        <p class="card-text" id="promo">{{obj.promo}}</p>
+        <p class="card-text" id="preco">R$ {{obj.valor}}</p>
+        <a class="btn btn-primary" (click)="redirecionar(obj)">VER
+        </a>
+      </div>
+    </div>
+  </div>
