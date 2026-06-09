@@ -26,6 +26,7 @@ CommandLineRunner carregarProdutos(ProdutoRepository bd) {
 		p.setPromo(830.00);
 		p.setQuantidade(10);
         p.setDestaque(1);
+		p.setKeywords("calca-feminina");
 
 		bd.save(p);
 
@@ -39,6 +40,7 @@ CommandLineRunner carregarProdutos(ProdutoRepository bd) {
 		p2.setPromo(650.00);
 		p2.setQuantidade(7);
         p2.setDestaque(1);
+		p2.setKeywords("camiseta-feminina");
 
 		bd.save(p2);
 	};

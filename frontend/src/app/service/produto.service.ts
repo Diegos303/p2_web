@@ -9,6 +9,12 @@ import { Produto } from '../model/produto';
 export class ProdutoService {
     constructor(private http:HttpClient) { }
 
+  buscarPorKeywords(keywords: string) {
+    return this.http.get<Produto[]>(
+      `http://localhost:8081/api/produto/keywords/${keywords}`
+    );
+  }
+
   public gravar(obj:Produto) : Observable<any>
   {
     return this.http.post("http://localhost:8081/api/produto", obj);
@@ -33,5 +39,4 @@ export class ProdutoService {
   public fazerBusca(termo:string):Observable<any>{
     return this.http.get("http://localhost:8081/api/produto/busca/"+ termo);
   }
-
 }

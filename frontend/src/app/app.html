@@ -30,10 +30,26 @@
           Masculino
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-          <li><a class="dropdown-item" routerLink="/camisetas-m">Camisetas</a></li>
-          <li><a class="dropdown-item" routerLink="/shorts-m">Shorts</a></li>
-          <li><a class="dropdown-item" routerLink="/blusas-m">Blusas</a></li>
-        </ul>
+          <li>
+            <a class="dropdown-item"
+              [routerLink]="['/menu-produto', 'camiseta-masculina']">
+              Camisetas
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item"
+              [routerLink]="['/menu-produto', 'short-masculino']">
+              Shorts
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item"
+              [routerLink]="['/menu-produto', 'blusa-masculina']">
+              Blusas
+            </a>
+          </li>        </ul>
       </li>
 
       <li class="nav-item dropdown">
@@ -41,9 +57,24 @@
           Feminino
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-          <li><a class="dropdown-item" routerLink="/camisetas-f">Camisetas</a></li>
-          <li><a class="dropdown-item" routerLink="/calcas-f">Calças</a></li>
-          <li><a class="dropdown-item" routerLink="/blusas-f">Blusas</a></li>
+          <li>
+            <a class="dropdown-item"
+              [routerLink]="['/menu-produto', 'camiseta-feminina']">
+              Camisetas
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item"
+              [routerLink]="['/menu-produto', 'calca-feminina']">
+              Calças
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item"
+              [routerLink]="['/menu-produto', 'blusa-feminina']">
+              Blusas
+            </a>
+          </li>
         </ul>
       </li>
 
@@ -52,8 +83,18 @@
           Acessórios
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
-          <li><a class="dropdown-item" routerLink="/chapeus">Bonés</a></li>
-          <li><a class="dropdown-item" routerLink="/bolsas">Bolsas</a></li>
+          <li>
+            <a class="dropdown-item"
+              [routerLink]="['/menu-produto', 'chapeu']">
+              Bonés
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item"
+              [routerLink]="['/menu-produto', 'bolsa']">
+              Bolsas
+            </a>
+          </li>
         </ul>
       </li>
 

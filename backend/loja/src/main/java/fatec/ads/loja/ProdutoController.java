@@ -62,4 +62,11 @@ public class ProdutoController {
         return bd.fazerBusca("%"+ p +"%");
     }
 
+    @GetMapping("/api/produto/keywords/{keywords}")
+    public List<Produto> buscarPorKeywords(
+            @PathVariable("keywords") String keywords){
+
+        return bd.buscarPorKeywords(keywords);
+    }
+
 }
