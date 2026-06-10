@@ -27,9 +27,14 @@ export class MenuProduto implements OnInit {
 
     this.route.paramMap.subscribe(params => {
 
-      this.keywords = params.get('keywords') || '';
+      const termo = params.get('termo');
 
-      console.log('Keyword recebida:', this.keywords);
+      if (termo) {
+        this.buscarTermo(termo);
+        return;
+      }
+
+      this.keywords = params.get('keywords') || '';
 
       this.buscarProdutos();
 
@@ -68,6 +73,25 @@ export class MenuProduto implements OnInit {
       location.href="detalhe";
 
     console.log(obj);
+
+  }
+
+  buscarTermo(termo: string) {
+
+    console.log('Termo recebido:', termo);
+
+    this.service.buscar(termo).subscribe(
+      dados => {
+
+        console.log('Produtos encontrados:', dados);
+
+        this.lista = dados;
+
+      },
+      erro => {
+        console.error(erro);
+      }
+    );
 
   }
 

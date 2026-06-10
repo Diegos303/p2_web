@@ -16,4 +16,6 @@ export const routes: Routes = [
     {path:"login",component:Login},
     {path:"detalhe",component:Detalhe},
     {path:"carrinho", component:Carrinho},
-    {path: "menu-produto/:keywords",component:MenuProduto},];
+    {path: "menu-produto/:keywords",component:MenuProduto},
+    {path: 'busca/:termo',component:MenuProduto},
+  ];

@@ -39,4 +39,13 @@ export class ProdutoService {
   public fazerBusca(termo:string):Observable<any>{
     return this.http.get("http://localhost:8081/api/produto/busca/"+ termo);
   }
+
+  buscar(termo: string) {
+
+    console.log('Buscando:', termo);
+
+    return this.http.get<Produto[]>(
+      `http://localhost:8081/api/produto/busca/${termo}`
+    );
+  }
 }
