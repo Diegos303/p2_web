@@ -6,7 +6,7 @@ import { EsqueciSenha } from './esqueci-senha/esqueci-senha';
 import { Detalhe } from './detalhe/detalhe';
 import { Carrinho } from './carrinho/carrinho';
 import { MenuProduto } from './menu-protudo/menu-produto/menu-produto';
-
+import { Perfil } from './perfil/perfil';
 
 export const routes: Routes = [
     {path:"cadastro", component:Cadastro},
@@ -18,4 +18,5 @@ export const routes: Routes = [
     {path:"carrinho", component:Carrinho},
     {path: "menu-produto/:keywords",component:MenuProduto},
     {path: 'busca/:termo',component:MenuProduto},
+    {path:"perfil", component:Perfil}
   ];

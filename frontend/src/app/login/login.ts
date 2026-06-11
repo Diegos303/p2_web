@@ -22,17 +22,16 @@ export class Login {
     this.service.fazerLogin(this.obj).subscribe(
       (dados) => {
 
-        this.obj = dados;
-
-        if (this.obj.id == 0) {
+        if (dados.id == 0) {
           alert("Usuário ou senha inválidos!");
-        } else {
-          alert("Login realizado com sucesso!");
-
-          localStorage.setItem("login", JSON.stringify(this.obj));
-          location.href = "./cadastro";
+          return;
         }
 
+        this.obj = dados;
+
+        alert("Login realizado com sucesso!");
+        localStorage.setItem("login", JSON.stringify(this.obj));
+        location.href = "./perfil";
       },
       (erro) => {
         console.error(erro);

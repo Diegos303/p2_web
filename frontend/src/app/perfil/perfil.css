@@ -1,0 +1,103 @@
+body {
+    background-color: #f5f5f5;
+}
+
+.perfil {
+    width: 700px;
+    max-width: 90%;
+    margin: 40px auto;
+    background-color: #0cc0df;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.perfil h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.dados_usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.dados_usuario label {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #0cc0df;
+    box-shadow: 0 0 5px rgba(12, 192, 223, 0.5);
+}
+
+.id-usuario {
+    background-color: #e9ecef;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.salvar {
+    background-color: yellowgreen;
+    color: white;
+}
+
+.salvar:hover {
+    background-color: #0aa6c0;
+}
+
+.excluir {
+    background-color: #dc3545;
+    color: white;
+}
+
+.excluir:hover {
+    background-color: #bb2d3b;
+}
+
+.voltar {
+    background-color: #6c757d;
+    color: white;
+}
+
+.voltar:hover {
+    background-color: #5a6268;
+}
+
+.desconectar {
+    background-color: #fd7e14;
+    color: white;
+}
+
+.desconectar:hover {
+    background-color: #e76b00;
+}

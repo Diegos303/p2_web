@@ -1,0 +1,87 @@
+<div class="perfil">
+
+    <h2>Meu Perfil</h2>
+
+    <div class="dados_usuario">
+
+        <label for="id">ID do Usuário</label>
+        <input
+            id="id"
+            type="text"
+            [value]="obj.id"
+            class="form-control id-usuario"
+            readonly>
+
+        <label for="nome">Nome</label>
+        <input
+            id="nome"
+            type="text"
+            [(ngModel)]="obj.nome"
+            class="form-control">
+
+        <label for="email">Email</label>
+        <input
+            id="email"
+            type="email"
+            [(ngModel)]="obj.email"
+            class="form-control">
+
+        <label for="destinatario">Destinatário</label>
+        <input
+            id="destinatario"
+            type="text"
+            [(ngModel)]="obj.destinatario"
+            class="form-control">
+
+        <label for="cep">CEP</label>
+        <input
+            id="cep"
+            type="text"
+            [(ngModel)]="obj.cep"
+            class="form-control">
+
+        <label for="telefone">Telefone</label>
+        <input
+            id="telefone"
+            type="text"
+            [(ngModel)]="obj.telefone"
+            class="form-control">
+
+        <label for="senha">Senha</label>
+        <input
+            id="senha"
+            type="password"
+            [(ngModel)]="obj.senha"
+            class="form-control">
+
+    </div>
+
+    <div class="button">
+
+        <button
+            (click)="alterarDados()"
+            class="btn salvar">
+            Salvar Alterações
+        </button>
+
+        <button
+            (click)="excluirConta()"
+            class="btn excluir">
+            Excluir Conta
+        </button>
+
+        <button
+            (click)="desconectar()"
+            class="btn desconectar">
+            Desconectar
+        </button>
+
+        <button
+            (click)="voltar()"
+            class="btn voltar">
+            Voltar
+        </button>
+
+    </div>
+
+</div>

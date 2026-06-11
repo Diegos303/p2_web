@@ -28,4 +28,13 @@ export class App {
     ]);
 
   }
+  abrirPerfil() {
+
+    if (localStorage.getItem("login")) {
+      location.href = "./perfil";
+    } else {
+      location.href = "./login";
+    }
+
+  }
 }
