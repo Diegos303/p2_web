@@ -14,7 +14,7 @@ public class Produto {
     private String nome;
     private String descritivo;
     private double valor;
-    private double promo;
+    private String promo;
     private int quantidade;
     private int destaque;
     private String keywords;
@@ -43,10 +43,10 @@ public class Produto {
     public void setValor(double valor) {
         this.valor = valor;
     }
-    public double getPromo() {
+    public String getPromo() {
         return promo;
     }
-    public void setPromo(double promo) {
+    public void setPromo(String promo) {
         this.promo = promo;
     }
     public int getQuantidade() {

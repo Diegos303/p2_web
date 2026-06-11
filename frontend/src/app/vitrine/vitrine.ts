@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Produto } from '../model/produto';
 import { ProdutoService } from '../service/produto.service';
@@ -11,30 +11,54 @@ import { ProdutoService } from '../service/produto.service';
   styleUrl: './vitrine.css'
 })
 export class Vitrine {
-   mensagem: String = "";
-   lista : Produto[] =[];
 
-   constructor(private service: ProdutoService){
+   mensagem: string = "";
+   lista: Produto[] = [];
+
+   constructor(
+      private service: ProdutoService,
+      //--
+      private cdr: ChangeDetectorRef
+   ){
       this.carregarLista();
    }
 
    carregarLista(){
+
       this.mensagem = "";
+
       this.service.carregarVitrine().subscribe(
         (dados) => {
-            console.log(dados);
+
+            console.log("Dados recebidos:", dados);
+
             this.lista = dados;
-            if(this.lista.length<=0) this.mensagem = "não encontrei nenhum destaque na vitrine!";
+
+            console.log("Quantidade:", this.lista.length);
+            //---
+            this.cdr.detectChanges();
+
+            if(this.lista.length <= 0){
+              this.mensagem = "não encontrei nenhum destaque na vitrine!";
+            }
+
         },
         (erro) => {
+
+            console.error(erro);
+
             this.mensagem = "Ocorreu um erro, tente mais tarde!";
-        });
+        }
+      );
    }
 
-  /*Routes*/
+   redirecionar(obj: Produto){
 
-  redirecionar(obj:Produto){
-      localStorage.setItem("ProdutoSelecionado", JSON.stringify(obj));
-      location.href="detalhe";
-  }
+      localStorage.setItem(
+        "ProdutoSelecionado",
+        JSON.stringify(obj)
+      );
+
+      location.href = "detalhe";
+   }
 }

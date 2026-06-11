@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { ChangeDetectorRef } from '@angular/core';
 
 import { Produto } from '../../model/produto';
 import { ProdutoService } from '../../service/produto.service';
@@ -20,7 +21,9 @@ export class MenuProduto implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private service: ProdutoService
+    private service: ProdutoService,
+    //--
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -49,6 +52,8 @@ export class MenuProduto implements OnInit {
         next: (retorno) => {
 
           this.lista = retorno;
+          //---
+          this.cdr.detectChanges();
 
           if (this.lista.length === 0) {
             this.mensagem = 'Nenhum produto encontrado.';
@@ -86,6 +91,9 @@ export class MenuProduto implements OnInit {
         console.log('Produtos encontrados:', dados);
 
         this.lista = dados;
+
+        //--
+        this.cdr.detectChanges();
 
       },
       erro => {

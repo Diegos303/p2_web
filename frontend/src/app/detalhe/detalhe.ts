@@ -29,13 +29,26 @@ export class Detalhe {
       }
     }
 
-    Comprar() {
+Comprar() {
 
     let carrinho = JSON.parse(
         localStorage.getItem("Carrinho") || "[]"
     );
 
-    carrinho.push(this.obj);
+    const existente = carrinho.find(
+        (p: Produto) => p.codigo === this.obj.codigo
+    );
+
+    if(existente){
+
+        existente.quantidadeVenda++;
+
+    } else {
+
+        this.obj.quantidadeVenda = 1;
+
+        carrinho.push(this.obj);
+    }
 
     localStorage.setItem(
         "Carrinho",
